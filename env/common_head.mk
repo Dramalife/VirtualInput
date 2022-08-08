@@ -1,10 +1,10 @@
 BUILD_PATH = build
 
-USR_LOCAL=/home/wangyang/3rdparty
+USR_LOCAL=$(shell pwd)
 
-CC	=	gcc
-LN	=	gcc
+CC	?=	gcc
+LD	?=	gcc
 
 LD_OBJ    = EXE
 FLAG_SO   = -pipe -fPIC -shared
-FLAG_EXE  =
+FLAG_EXE  = -Wl,-rpath=./
